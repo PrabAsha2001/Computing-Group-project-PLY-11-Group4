@@ -1,0 +1,8 @@
+.text-box {
+    -fx-background-color: transparent;
+    -fx-border-radius: 50px; /* Set the desired border radius */
+    -fx-border-color: #ffff; /* Set the border color */
+    -fx-border-width: 1px; /* Set the border width */
+    -fx-font-family: Roboto;
+}
+

@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.invento.invento.MainController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.49" prefWidth="939.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.MainController">
+   <left>
+      <AnchorPane prefHeight="560.0" prefWidth="470.0" style="-fx-background-color: #202020;" BorderPane.alignment="CENTER">
+         <children>
+            
+            <ImageView fitHeight="18.0" fitWidth="69.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/LOGO.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="134.0" prefHeight="76.0" prefWidth="434.0" text="Lorem Ipsum is simply dummy text of the printing and &#10;typesetting industry. Lorem Ipsum has been the " textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="35.0" layoutY="226.0" prefHeight="52.82" prefWidth="369.73" promptText="Enter your email" style="-fx-border-radius: 20;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPassword" layoutX="35.0" layoutY="300.0" prefHeight="52.82" prefWidth="369.73" promptText="Enter your password" style="-fx-border-radius: 20;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <Button fx:id="btnLogin" layoutX="35.0" layoutY="372.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="52.82" prefWidth="369.73" style="-fx-border-radius: 20;" stylesheets="@CSS/style.css" text="Login" textFill="WHITE" />
+            <Label layoutX="35.0" layoutY="499.0" prefHeight="31.0" prefWidth="434.0" text="You can reset the password through domain.domain. " textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="396.0" layoutX="37.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/LogIntoINVENTO.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblMessage" layoutX="35.0" layoutY="433.0" prefHeight="27.0" prefWidth="434.0" textFill="#e73636">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="560.0" prefWidth="476.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnClose" layoutX="403.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeButtonOnAction">
+               <graphic>
+                  <ImageView fx:id="b" fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cross.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+   </right>
+</BorderPane>
