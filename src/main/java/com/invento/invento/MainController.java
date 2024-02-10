@@ -1,6 +1,7 @@
 package com.invento.invento;
 
 import com.invento.invento.javaClass.DatabaseConnection;
+import com.invento.invento.javaClass.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,29 +49,37 @@ public class MainController {
         }
     }
 
-    public void validateLogin(){
+    public void validateLogin() {
 
-        DatabaseConnection connectNow=new DatabaseConnection();
-        Connection connectDB=connectNow.getConnection();
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDB = connectNow.getConnection();
 
-        String sql="SELECT count(1) FROM user WHERE email='"+txtEmail.getText()+"' AND password='"+txtPassword.getText()+"' ";
+        String sql = "SELECT count(1) FROM user WHERE email='" + txtEmail.getText() + "' AND password='" + txtPassword.getText() + "' ";
 
-        try{
-            Statement statement=connectDB.createStatement();
-            ResultSet rs=statement.executeQuery(sql);
+        try {
+            Statement statement = connectDB.createStatement();
+            ResultSet rs = statement.executeQuery(sql);
 
-            while (rs.next()){
-                if (rs.getInt(1)==1) {
+            while (rs.next()) {
+                if (rs.getInt(1) == 1) {
+                    User user = new User(txtEmail.getText());
                     lblMessage.setText("Welcome");
 
                     btnLogin.getScene().getWindow().hide();
-                    Parent root= FXMLLoader.load(getClass().getResource("UserLogin.fxml"));
-                    Stage stage=new Stage();
-                    Scene scene=new Scene(root);
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("UserLogin.fxml"));
+                    Parent root = loader.load();
 
+                    // Access the controller to pass the User object or just the email
+                    UserLoginController userLoginController = loader.getController();
+                    userLoginController.setUserEmail(user.getEmail());
+
+                    AdminDashboardController adminDashboardController=loader.getController();
+                    userLoginController.setUserEmail(user.getEmail());
+
+                    Stage stage = new Stage();
+                    Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
-
                 }
 
             }
@@ -80,5 +89,7 @@ public class MainController {
 
 
     }
+
+
 
 }
