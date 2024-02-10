@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.49" prefWidth="939.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" fx:controller="com.invento.invento.UserLoginController" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.49" prefWidth="939.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.UserLoginController">
    <top>
       <AnchorPane prefHeight="564.0" prefWidth="939.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,9 +23,10 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="253.0" prefHeight="52.82" prefWidth="369.73" promptText="Phone Number" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
-            <TextField layoutX="288.0" layoutY="321.0" prefHeight="52.82" prefWidth="369.73" promptText="Password" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
-            <Button layoutX="288.0" layoutY="402.0" mnemonicParsing="false" stylesheets="@CSS/style.css" text="Button" />
+            <TextField fx:id="txtPhoneNo" layoutX="285.0" layoutY="253.0" prefHeight="52.82" prefWidth="369.73" promptText="Phone Number" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPassword" layoutX="288.0" layoutY="321.0" prefHeight="52.82" prefWidth="369.73" promptText="Password" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <Button fx:id="btnLogin" layoutX="288.0" layoutY="394.0" mnemonicParsing="false" onAction="#AdminloginButtonOnAction" prefHeight="52.82" prefWidth="369.73" stylesheets="@CSS/style.css" text="Login" />
+            <Label fx:id="lblMessage" layoutX="288.0" layoutY="469.0" textFill="#c72f2f" />
          </children>
       </AnchorPane>
    </top>
