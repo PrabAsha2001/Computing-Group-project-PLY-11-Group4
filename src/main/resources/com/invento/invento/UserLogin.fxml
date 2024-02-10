@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.49" prefWidth="939.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" fx:controller="com.invento.invento.UserLoginController" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="564.0" prefWidth="939.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="211.0" fitWidth="588.0" layoutX="176.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/AreyouanAdminoraUser_.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="288.0" layoutY="161.0" text="Lorem Ipsum is simply dummy text of the printing and &#10;typesetting industry. Lorem Ipsum has been the  " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField layoutX="285.0" layoutY="253.0" prefHeight="52.82" prefWidth="369.73" promptText="Phone Number" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField layoutX="288.0" layoutY="321.0" prefHeight="52.82" prefWidth="369.73" promptText="Password" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <Button layoutX="288.0" layoutY="402.0" mnemonicParsing="false" stylesheets="@CSS/style.css" text="Button" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

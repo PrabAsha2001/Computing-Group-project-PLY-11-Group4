@@ -4,5 +4,7 @@
     -fx-border-color: #ffff; /* Set the border color */
     -fx-border-width: 1px; /* Set the border width */
     -fx-font-family: Roboto;
+    -fx-padding: 0px 15px;
+    -fx-text-fill: #ffff;
 }
 
