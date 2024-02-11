@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root=FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
         stage.initStyle(StageStyle.DECORATED);
         //stage.setTitle("Hello!");
         stage.setScene(new Scene(root,939,559.49));

@@ -73,9 +73,6 @@ public class MainController {
                     UserLoginController userLoginController = loader.getController();
                     userLoginController.setUserEmail(user.getEmail());
 
-                    AdminDashboardController adminDashboardController=loader.getController();
-                    userLoginController.setUserEmail(user.getEmail());
-
                     Stage stage = new Stage();
                     Scene scene = new Scene(root);
                     stage.setScene(scene);

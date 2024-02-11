@@ -75,9 +75,15 @@ public class UserLoginController {
 
                     if(type.equals("admin")){
                         btnLogin.getScene().getWindow().hide();
-                        Parent root= FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
-                        Stage stage=new Stage();
-                        Scene scene=new Scene(root);
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminDashboard.fxml"));
+                        Parent root = loader.load();
+
+                        // Access the controller to pass the User object or just the email
+                        AdminDashboardController adminDashboardController = loader.getController();
+                        adminDashboardController.setUserEmail(userEmail);
+
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
                     }else{

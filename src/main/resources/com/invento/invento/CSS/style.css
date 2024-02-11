@@ -8,3 +8,14 @@
 .button:hover {
     -fx-background-color: #002ED6; /* Hover background color */
 }
+.dash-button{
+    -fx-background-color: #272727;
+    -fx-padding: 0px 15px;
+    -fx-background-radius: 12px;
+}
+.dash-button:hover{
+    -fx-background-color:#1B1B1B;
+}
+.dash-button:focused{
+    -fx-background-color:  #2453FE;
+}
