@@ -1,7 +1,7 @@
 package com.invento.invento;
 
-import com.invento.invento.javaClass.DatabaseConnection;
-import com.invento.invento.javaClass.User;
+import javaClass.DatabaseConnection;
+import javaClass.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

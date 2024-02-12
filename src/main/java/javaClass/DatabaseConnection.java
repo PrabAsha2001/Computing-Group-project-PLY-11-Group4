@@ -1,4 +1,4 @@
-package com.invento.invento.javaClass;
+package javaClass;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

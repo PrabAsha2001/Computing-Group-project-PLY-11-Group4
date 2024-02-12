@@ -1,4 +1,4 @@
-package com.invento.invento.javaClass;
+package javaClass;
 
 public class User {
 

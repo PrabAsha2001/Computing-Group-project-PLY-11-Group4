@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.invento.invento.User"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="765.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.UserController">
+   <children>
+      <AnchorPane layoutX="266.0" prefHeight="559.0" prefWidth="498.0" style="-fx-background-color: #1B1B1B;">
+         <children>
+            <ScrollPane layoutX="5.0" layoutY="86.0" prefHeight="461.0" prefWidth="487.0" style="-fx-background-color: #1B1B1B;">
+               <content>
+                  <TableView fx:id="tblUser" prefHeight="516.0" prefWidth="742.0">
+                    <columns>
+                      <TableColumn fx:id="clmPhone" prefWidth="123.99999690055847" text="Phone Number" />
+                      <TableColumn fx:id="clmName" prefWidth="140.0000457763672" text="Full Name" />
+                        <TableColumn fx:id="clmPassword" prefWidth="103.20001220703125" text="Password" />
+                        <TableColumn fx:id="clmAddress" prefWidth="122.39996337890625" text="Address" />
+                        <TableColumn fx:id="clmType" prefWidth="107.2000732421875" text="Type" />
+                        <TableColumn fx:id="clmEmail" prefWidth="126.4000122070313" text="Email" />
+                    </columns>
+                     <stylesheets>
+                        <URL value="@CSS/style.css" />
+                        <URL value="@CSS/textboxes.css" />
+                     </stylesheets>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="559.0" prefWidth="266.0" style="-fx-background-color: #202020;">
+         <children>
+            <TextField fx:id="txtPhoneNumber" layoutX="21.0" layoutY="145.0" prefHeight="33.23" prefWidth="224.12" promptText="Phone Number" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtFullName" layoutX="21.0" layoutY="189.0" prefHeight="33.23" prefWidth="224.12" promptText="Full Name" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPassword" layoutX="21.0" layoutY="233.0" prefHeight="33.23" prefWidth="224.12" promptText="Password" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtAddress" layoutX="21.0" layoutY="276.0" prefHeight="33.23" prefWidth="224.12" promptText="Address" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtEmail" layoutX="21.0" layoutY="363.0" prefHeight="33.23" prefWidth="224.12" promptText="Email" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <Button fx:id="btnAdd" layoutX="22.0" layoutY="422.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+            <Button fx:id="btnEdit" layoutX="164.0" layoutY="422.0" mnemonicParsing="false" text="Edit" />
+            <Button fx:id="btnDelete" layoutX="209.0" layoutY="422.0" mnemonicParsing="false" text="Del" />
+            <TextField fx:id="txtSearch" layoutX="22.0" layoutY="69.0" prefHeight="34.0" prefWidth="226.0" />
+            <Button layoutX="209.0" layoutY="74.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" text="Search" />
+            <TextField fx:id="txtType" layoutX="23.0" layoutY="320.0" prefHeight="33.23" prefWidth="224.12" promptText="Address" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>

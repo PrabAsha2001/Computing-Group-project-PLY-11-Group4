@@ -14,11 +14,7 @@
       <AnchorPane prefHeight="560.0" prefWidth="470.0" style="-fx-background-color: #202020;" BorderPane.alignment="CENTER">
          <children>
             
-            <ImageView fitHeight="18.0" fitWidth="69.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Images/LOGO.png" />
-               </image>
-            </ImageView>
+
             <Label layoutX="35.0" layoutY="134.0" prefHeight="76.0" prefWidth="434.0" text="Lorem Ipsum is simply dummy text of the printing and &#10;typesetting industry. Lorem Ipsum has been the " textFill="WHITE">
                <font>
                   <Font name="Arial" size="13.0" />

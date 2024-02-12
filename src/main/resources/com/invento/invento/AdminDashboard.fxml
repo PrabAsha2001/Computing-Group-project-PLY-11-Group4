@@ -24,7 +24,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnUser" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="125.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="User" textFill="WHITE">
+            <Button fx:id="btnUser" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="125.0" mnemonicParsing="false" onAction="#handleWindow" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="User" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -78,6 +78,7 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button fx:id="btnLoggout" layoutX="49.0" layoutY="504.0" mnemonicParsing="false" text="Logout" />
          </children>
       </AnchorPane>
    </left>

@@ -3,8 +3,15 @@ package com.invento.invento;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.util.Optional;
 
 public class AdminDashboardController {
 
@@ -40,12 +47,17 @@ public class AdminDashboardController {
     private AnchorPane pnlMain;
 
     @FXML
+    private Button btnLoggout;
+
+
+    @FXML
     private void handleWindow(ActionEvent event){
         if(event.getSource()==btnDashboard){
 
             loadDashboard();
             
         } else if (event.getSource()==btnUser) {
+            loadUser();
             
         } else if (event.getSource()==btnInventory) {
 
@@ -72,6 +84,24 @@ public class AdminDashboardController {
 
             CustomerController customerController = loader.getController();
             customerController.setUserEmail(userEmail);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+    }
+
+    private void loadUser(){
+        try {
+            // Load the customer FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("user.fxml"));
+            AnchorPane myPane = loader.load();
+
+            // Set the customer FXML content into the anchor pane
+            pnlMain.getChildren().setAll(myPane);
+
+            UserController userController = loader.getController();
+            userController.setUserEmail(userEmail);
 
         } catch (Exception e) {
             e.printStackTrace();
