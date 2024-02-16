@@ -8,3 +8,8 @@
     -fx-text-fill: #ffff;
 }
 
+.search-box{
+    -fx-background-radius: 10;
+    -fx-background-color: #404040;
+    -fx-text-fill: white;
+}

@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="765.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.UserController">
    <children>
       <AnchorPane layoutX="266.0" prefHeight="559.0" prefWidth="498.0" style="-fx-background-color: #1B1B1B;">
          <children>
-            <ScrollPane layoutX="5.0" layoutY="86.0" prefHeight="461.0" prefWidth="487.0" style="-fx-background-color: #1B1B1B;">
+            <ScrollPane layoutX="5.0" layoutY="86.0" prefHeight="461.0" prefWidth="487.0" stylesheets="@CSS/style.css">
                <content>
-                  <TableView fx:id="tblUser" prefHeight="516.0" prefWidth="742.0">
+                  <TableView fx:id="tblUser" prefHeight="516.0" prefWidth="742.0" style="-fx-background-color: #1B1B1B;" stylesheets="@CSS/style.css">
                     <columns>
                       <TableColumn fx:id="clmPhone" prefWidth="123.99999690055847" text="Phone Number" />
                       <TableColumn fx:id="clmName" prefWidth="140.0000457763672" text="Full Name" />
@@ -23,13 +24,15 @@
                         <TableColumn fx:id="clmType" prefWidth="107.2000732421875" text="Type" />
                         <TableColumn fx:id="clmEmail" prefWidth="126.4000122070313" text="Email" />
                     </columns>
-                     <stylesheets>
-                        <URL value="@CSS/style.css" />
-                        <URL value="@CSS/textboxes.css" />
-                     </stylesheets>
                   </TableView>
                </content>
             </ScrollPane>
+            <Button layoutX="379.0" layoutY="33.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #404040; -fx-background-radius: 10;" text="       Report" textFill="WHITE" />
+            <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="392.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/printer.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="559.0" prefWidth="266.0" style="-fx-background-color: #202020;">
@@ -39,11 +42,39 @@
             <TextField fx:id="txtPassword" layoutX="21.0" layoutY="233.0" prefHeight="33.23" prefWidth="224.12" promptText="Password" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtAddress" layoutX="21.0" layoutY="276.0" prefHeight="33.23" prefWidth="224.12" promptText="Address" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtEmail" layoutX="21.0" layoutY="363.0" prefHeight="33.23" prefWidth="224.12" promptText="Email" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
-            <Button fx:id="btnAdd" layoutX="22.0" layoutY="422.0" mnemonicParsing="false" onAction="#Add" text="Add" />
-            <Button fx:id="btnEdit" layoutX="164.0" layoutY="422.0" mnemonicParsing="false" text="Edit" />
-            <Button fx:id="btnDelete" layoutX="209.0" layoutY="422.0" mnemonicParsing="false" text="Del" />
-            <TextField fx:id="txtSearch" layoutX="22.0" layoutY="69.0" prefHeight="34.0" prefWidth="226.0" />
-            <Button layoutX="209.0" layoutY="74.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" text="Search" />
+            <Button fx:id="btnAdd" layoutX="22.0" layoutY="422.0" mnemonicParsing="false" onAction="#Add" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #30B900;">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/ph_plus-bold.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnEdit" layoutX="143.0" layoutY="422.0" mnemonicParsing="false" onAction="#Edit" prefHeight="41.0" prefWidth="47.0" style="-fx-background-color: #D58917; -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/solar_pen-bold.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnDelete" layoutX="195.0" layoutY="422.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #ED1A0D;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/fluent_delete-20-filled.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TextField fx:id="txtSearch" layoutX="22.0" layoutY="69.0" prefHeight="34.0" prefWidth="226.0" promptText="Search User" styleClass="search-box" stylesheets="@CSS/textboxes.css" />
+            <Button fx:id="BtnSearch" layoutX="209.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/octicon_search-16.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <TextField fx:id="txtType" layoutX="23.0" layoutY="320.0" prefHeight="33.23" prefWidth="224.12" promptText="Address" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
          </children>
       </AnchorPane>

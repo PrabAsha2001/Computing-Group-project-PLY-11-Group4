@@ -57,6 +57,7 @@ public class AdminDashboardController {
             loadDashboard();
             
         } else if (event.getSource()==btnUser) {
+
             loadUser();
             
         } else if (event.getSource()==btnInventory) {
@@ -102,6 +103,7 @@ public class AdminDashboardController {
 
             UserController userController = loader.getController();
             userController.setUserEmail(userEmail);
+            userController.loadData();
 
         } catch (Exception e) {
             e.printStackTrace();

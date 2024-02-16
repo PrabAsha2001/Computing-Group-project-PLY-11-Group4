@@ -78,7 +78,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnLoggout" layoutX="49.0" layoutY="504.0" mnemonicParsing="false" text="Logout" />
+            <Button fx:id="btnLoggout" layoutX="49.0" layoutY="504.0" mnemonicParsing="false"  text="Logout" />
          </children>
       </AnchorPane>
    </left>
