@@ -6,10 +6,16 @@
     -fx-font-family: Roboto;
     -fx-padding: 0px 15px;
     -fx-text-fill: #ffff;
+    -fx-pref-width:224.12px ;
+    -fx-pref-height: 33.23;
 }
 
 .search-box{
     -fx-background-radius: 10;
     -fx-background-color: #404040;
     -fx-text-fill: white;
+    -fx-pref-width:224 ;
+    -fx-pref-height: 33;
 }
+
+

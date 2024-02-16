@@ -33,7 +33,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnInventory" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="167.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Inventory" textFill="WHITE">
+            <Button fx:id="btnInventory" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleWindow" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Inventory" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -42,7 +42,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnSupplier" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="210.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Supplier" textFill="WHITE">
+            <Button fx:id="btnSupplier" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleWindow" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Supplier" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -60,7 +60,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="295.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Orders" textFill="WHITE">
+            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleWindow" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Orders" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -69,7 +69,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnBill" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="338.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Billin" textFill="WHITE">
+            <Button fx:id="btnBill" alignment="BASELINE_LEFT" layoutX="8.0" layoutY="338.0" mnemonicParsing="false" onAction="#handleWindow" prefHeight="32.0" prefWidth="156.0" styleClass="dash-button" stylesheets="@CSS/style.css" text="Billin" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -78,7 +78,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnLoggout" layoutX="49.0" layoutY="504.0" mnemonicParsing="false"  text="Logout" />
+            <Button fx:id="btnLoggout" layoutX="49.0" layoutY="504.0" mnemonicParsing="false" text="Logout" />
          </children>
       </AnchorPane>
    </left>

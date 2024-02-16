@@ -66,6 +66,7 @@ public class AdminDashboardController {
             loadCustomer();
 
         }else if(event.getSource()==btnSupplier){
+            loadSupplier();
 
         }else if(event.getSource()==btnOrders){
 
@@ -115,10 +116,30 @@ public class AdminDashboardController {
         try {
             // Load the customer FXML file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PanelDashboard.fxml"));
-            AnchorPane pnlDashbpardPane = loader.load();
+            AnchorPane myPane = loader.load();
 
             // Set the customer FXML content into the anchor pane
-            pnlMain.getChildren().setAll(pnlDashbpardPane);
+            pnlMain.getChildren().setAll(myPane);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+    }
+
+    private void loadSupplier() {
+        try {
+            // Load the customer FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("supplier.fxml"));
+            AnchorPane myPane = loader.load();
+
+            // Set the customer FXML content into the anchor pane
+            pnlMain.getChildren().setAll(myPane);
+
+            SupplierController supplierController=loader.getController();
+            supplierController.setUserEmail(userEmail);
+            supplierController.loadData();
 
 
         } catch (Exception e) {

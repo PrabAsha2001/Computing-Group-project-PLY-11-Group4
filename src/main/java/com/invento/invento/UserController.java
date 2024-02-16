@@ -30,7 +30,7 @@ public class UserController implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
         tblUser.setOnMouseClicked(event -> {
-            if (event.getClickCount() == 1) { // Single click
+            if (event.getClickCount() == 1) {
                 handleTableClick();
             }
         });
@@ -124,36 +124,36 @@ public class UserController implements Initializable {
             displayEmployeeDetailsBySearch(searchTerm);
         }
     }
-    public void displayEmployeeDetailsBySearch(String searchTerm) {
-        Connection connectDB = connectNow.getConnection();
-        String sql = "SELECT contact, name, password, address, type, email FROM employee WHERE userEmail=? AND (contact LIKE ?) LIMIT 1";
-        try {
-            PreparedStatement preparedStatement = connectDB.prepareStatement(sql);
-            preparedStatement.setString(1, userEmail);
-            preparedStatement.setString(2,  searchTerm );
-            ResultSet resultSet = preparedStatement.executeQuery();
+        public void displayEmployeeDetailsBySearch(String searchTerm) {
+            Connection connectDB = connectNow.getConnection();
+            String sql = "SELECT contact, name, password, address, type, email FROM employee WHERE userEmail=? AND (contact LIKE ?) LIMIT 1";
+            try {
+                PreparedStatement preparedStatement = connectDB.prepareStatement(sql);
+                preparedStatement.setString(1, userEmail);
+                preparedStatement.setString(2,  searchTerm );
+                ResultSet resultSet = preparedStatement.executeQuery();
 
-            if (resultSet.next()) {
-                Employee resultEmployee = new Employee(
-                        resultSet.getString("contact"),
-                        resultSet.getString("name"),
-                        resultSet.getString("password"),
-                        resultSet.getString("address"),
-                        resultSet.getString("type"),
-                        resultSet.getString("email")
-                );
-                displayEmployeeDetails(resultEmployee);
-                OldPhone=txtPhoneNumber.getText();
-            } else {
-                // Handle the case when no matching records are found
-                clearTextFields();
+                if (resultSet.next()) {
+                    Employee resultEmployee = new Employee(
+                            resultSet.getString("contact"),
+                            resultSet.getString("name"),
+                            resultSet.getString("password"),
+                            resultSet.getString("address"),
+                            resultSet.getString("type"),
+                            resultSet.getString("email")
+                    );
+                    displayEmployeeDetails(resultEmployee);
+                    OldPhone=txtPhoneNumber.getText();
+                } else {
+                    // Handle the case when no matching records are found
+                    clearTextFields();
+                }
+                connectDB.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            connectDB.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-    }
     private void clearTextFields() {
         txtPhoneNumber.clear();
         txtFullName.clear();
@@ -280,8 +280,38 @@ public class UserController implements Initializable {
 
 
      }
+    @FXML private void Delete(ActionEvent event) {
+
+        Connection connectDB = connectNow.getConnection();
+        String sql = "delete from employee where contact=? AND userEmail=?";
+        try {
+            PreparedStatement preparedStatement = connectDB.prepareStatement(sql);
+            preparedStatement.setString(1, txtPhoneNumber.getText());
+            preparedStatement.setString(2, userEmail);
+            preparedStatement.executeUpdate();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Employee Updation");
+            alert.setHeaderText("Employee Updation");
+            alert.setContentText("Employee Details updated successfully !");
+
+            alert.showAndWait();
+
+            clearTextFields();
+
+            loadData();
+            connectDB.close();
+
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Employee Updation");
+            alert.setHeaderText("Employee Updation");
+            alert.setContentText("To change the contact informat");
+            e.printStackTrace();
+        }
 
 
+    }
 
 
 

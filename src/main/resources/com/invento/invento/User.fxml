@@ -37,12 +37,12 @@
       </AnchorPane>
       <AnchorPane prefHeight="559.0" prefWidth="266.0" style="-fx-background-color: #202020;">
          <children>
-            <TextField fx:id="txtPhoneNumber" layoutX="21.0" layoutY="145.0" prefHeight="33.23" prefWidth="224.12" promptText="Phone Number" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPhoneNumber" layoutX="21.0" layoutY="145.0" prefHeight="0.0" prefWidth="0.0" promptText="Phone Number" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtFullName" layoutX="21.0" layoutY="189.0" prefHeight="33.23" prefWidth="224.12" promptText="Full Name" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtPassword" layoutX="21.0" layoutY="233.0" prefHeight="33.23" prefWidth="224.12" promptText="Password" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtAddress" layoutX="21.0" layoutY="276.0" prefHeight="33.23" prefWidth="224.12" promptText="Address" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
             <TextField fx:id="txtEmail" layoutX="21.0" layoutY="363.0" prefHeight="33.23" prefWidth="224.12" promptText="Email" style="-fx-border-radius: 20px;" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
-            <Button fx:id="btnAdd" layoutX="22.0" layoutY="422.0" mnemonicParsing="false" onAction="#Add" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #30B900;">
+            <Button fx:id="btnAdd" layoutX="22.0" layoutY="422.0" mnemonicParsing="false" onAction="#Add" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #30B900;" styleClass="button2" stylesheets="@CSS/style.css">
                <graphic>
                   <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -58,7 +58,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btnDelete" layoutX="195.0" layoutY="422.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #ED1A0D;">
+            <Button fx:id="btnDelete" layoutX="195.0" layoutY="422.0" mnemonicParsing="false" onAction="#Delete" prefHeight="41.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-background-color: #ED1A0D;">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -66,7 +66,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <TextField fx:id="txtSearch" layoutX="22.0" layoutY="69.0" prefHeight="34.0" prefWidth="226.0" promptText="Search User" styleClass="search-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtSearch" layoutX="22.0" layoutY="69.0" prefHeight="34.0" prefWidth="226.0" promptText="Search Phone Number" styleClass="search-box" stylesheets="@CSS/textboxes.css" />
             <Button fx:id="BtnSearch" layoutX="209.0" layoutY="74.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">

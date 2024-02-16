@@ -19,9 +19,13 @@
 .dash-button:focused{
     -fx-background-color:  #2453FE;
 }
+.table-row-cell .text {
+    -fx-fill: white; /* Change the font color */
+}
 
 .table-view {
-    -fx-background-color:transparent;
+    -fx-text-fill: white;
+    -fx-background-color:#1B1B1B;
     -fx-border-radius: 10px;
     -fx-border-width: 0 1 1 1;
     -fx-border-color: #404040;
@@ -42,11 +46,31 @@
 .table-view .column-header .label {
     -fx-text-fill: white ;
 }
+.table-row-cell {
+    -fx-background-color: #1B1B1B; /* Change the background color */
+    -fx-text-fill: white; /* Change the font color */
+    -fx-border-style: none; /* Remove cell borders */
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  #2453FE; /* Change the background color of selected rows */
+    -fx-text-fill: #ffff; /* Change the font color of selected rows */
+}
+
+.table-view {
+    -fx-table-cell-border-color: transparent; /* Remove the cell borders in the entire TableView */
+}
 
 .scroll-pane{
     -fx-background-color: #1B1B1B;
+
 }
 
 .scroll-pane .scroll-bar{
     -fx-background-color:  #202020;
+}
+
+.button2{
+    -fx-pref-height: 47;
+    -fx-pref-height: 41;
 }

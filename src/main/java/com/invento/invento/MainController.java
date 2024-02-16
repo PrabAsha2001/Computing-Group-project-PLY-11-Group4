@@ -54,7 +54,7 @@ public class MainController {
         DatabaseConnection connectNow = new DatabaseConnection();
         Connection connectDB = connectNow.getConnection();
 
-        String sql = "SELECT count(1) FROM user WHERE email='" + txtEmail.getText() + "' AND password='" + txtPassword.getText() + "' ";
+        String sql = "SELECT count(1) FROM user WHERE userEmail='" + txtEmail.getText() + "' AND password='" + txtPassword.getText() + "' ";
 
         try {
             Statement statement = connectDB.createStatement();
