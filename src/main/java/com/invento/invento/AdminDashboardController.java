@@ -62,6 +62,8 @@ public class AdminDashboardController {
             
         } else if (event.getSource()==btnInventory) {
 
+            loadInventory();
+
         }else if(event.getSource()==btnCustomer){
             loadCustomer();
 
@@ -71,6 +73,7 @@ public class AdminDashboardController {
         }else if(event.getSource()==btnOrders){
 
         }else if(event.getSource()==btnBill){
+            loadBill();
 
         }
     }
@@ -86,6 +89,7 @@ public class AdminDashboardController {
 
             CustomerController customerController = loader.getController();
             customerController.setUserEmail(userEmail);
+            customerController.loadData();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -121,6 +125,10 @@ public class AdminDashboardController {
             // Set the customer FXML content into the anchor pane
             pnlMain.getChildren().setAll(myPane);
 
+            DashboardController dashboardController = loader.getController();
+            dashboardController.setUserEmail(userEmail);
+
+
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -140,6 +148,45 @@ public class AdminDashboardController {
             SupplierController supplierController=loader.getController();
             supplierController.setUserEmail(userEmail);
             supplierController.loadData();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+    }
+
+    private void loadInventory() {
+        try {
+            // Load the customer FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("inventory.fxml"));
+            AnchorPane myPane = loader.load();
+
+            // Set the customer FXML content into the anchor pane
+            pnlMain.getChildren().setAll(myPane);
+
+            InventoryController inventoryController=loader.getController();
+            inventoryController.setUserEmail(userEmail);
+            inventoryController.loadData01();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+    }
+
+    private void loadBill() {
+        try {
+            // Load the customer FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Bill.fxml"));
+            AnchorPane myPane = loader.load();
+
+            // Set the customer FXML content into the anchor pane
+            pnlMain.getChildren().setAll(myPane);
+
+            BillController billController=loader.getController();
+            billController.setUserEmail(userEmail);
 
 
         } catch (Exception e) {

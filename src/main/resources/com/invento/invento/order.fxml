@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="559.0" prefWidth="765.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.Order">
+   <children>
+      <TabPane layoutX="20.0" layoutY="68.0" prefHeight="467.0" prefWidth="722.0" stylesheets="@CSS/style.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Orders">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="439.0" prefWidth="722.0" stylesheets="@CSS/style.css">
+                           <content>
+                              <TableView prefHeight="440.0" prefWidth="724.0" stylesheets="@CSS/style.css">
+                                <columns>
+                                  <TableColumn prefWidth="121.59999924898148" text="Customer Contact" />
+                                  <TableColumn prefWidth="110.39996337890625" text="Product Code" />
+                                    <TableColumn prefWidth="79.99996948242188" text="Date" />
+                                    <TableColumn prefWidth="75.0" text="Time" />
+                                    <TableColumn prefWidth="75.0" text="Quantity" />
+                                    <TableColumn prefWidth="122.4000244140625" text="Customer Name" />
+                                    <TableColumn prefWidth="120.0" text="Product Name" />
+                                </columns>
+                                 <styleClass>
+                                    <String fx:value="table-row-cell" />
+                                    <String fx:value="table-view" />
+                                 </styleClass>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Order By Day">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Order By Month">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Order by Year">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="672.0" layoutY="18.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #ED1A0D;" styleClass="button2" stylesheets="@CSS/style.css">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/fluent_delete-20-filled.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

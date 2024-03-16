@@ -23,8 +23,8 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="txtPhoneNo" layoutX="285.0" layoutY="253.0" prefHeight="52.82" prefWidth="369.73" promptText="Phone Number" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
-            <TextField fx:id="txtPassword" layoutX="288.0" layoutY="321.0" prefHeight="52.82" prefWidth="369.73" promptText="Password" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPhoneNo" layoutX="285.0" layoutY="253.0" prefHeight="52.82" prefWidth="369.73" promptText="Phone Number" styleClass="text-box-2" stylesheets="@CSS/textboxes.css" />
+            <TextField fx:id="txtPassword" layoutX="288.0" layoutY="321.0" prefHeight="52.82" prefWidth="369.73" promptText="Password" styleClass="text-box-2" stylesheets="@CSS/textboxes.css" />
             <Button fx:id="btnLogin" layoutX="288.0" layoutY="394.0" mnemonicParsing="false" onAction="#AdminloginButtonOnAction" prefHeight="52.82" prefWidth="369.73" stylesheets="@CSS/style.css" text="Login" />
             <Label fx:id="lblMessage" layoutX="288.0" layoutY="469.0" textFill="#c72f2f" />
          </children>

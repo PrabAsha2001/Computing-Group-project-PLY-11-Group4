@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="765.0" style="-fx-background-color: #1B1B1B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.invento.invento.BillController">
+   <children>
+      <Label layoutX="28.0" layoutY="49.0" text="Choose Customer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtSearchCustomer" layoutX="28.0" layoutY="76.0" promptText="Enter contact number" styleClass="search-box" stylesheets="@CSS/textboxes.css" />
+      <TextField fx:id="txtCustomerName" editable="false" layoutX="264.0" layoutY="76.0" promptText="Name" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+      <Button fx:id="btnAddCustomer" layoutX="507.0" layoutY="72.0" mnemonicParsing="false" style="-fx-background-color: #30B900;" styleClass="button2" stylesheets="@CSS/style.css">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/ph_plus-bold.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnAddNewCustomer" layoutX="562.0" layoutY="70.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 10; -fx-background-color: #30B900;" text="Register new Customer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="28.0" layoutY="139.0" text="Choose Item" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtSearchProduct" layoutX="28.0" layoutY="172.0" promptText="Search Item code" styleClass="search-box" stylesheets="@CSS/textboxes.css" />
+      <TextField fx:id="txtProductName" editable="false" layoutX="264.0" layoutY="172.0" promptText="Product Name" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+      <TextField fx:id="txtProductPrice" editable="false" layoutX="507.0" layoutY="172.0" promptText="Price" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+      <TextField fx:id="txtBuyQuantity" layoutX="28.0" layoutY="227.0" promptText="Quantity" styleClass="text-box" stylesheets="@CSS/textboxes.css" />
+      <Label layoutX="28.0" layoutY="289.0" text="Total:" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPurchase" layoutX="30.0" layoutY="325.0" mnemonicParsing="false" onAction="#handlePurchase" prefHeight="40.0" prefWidth="86.0" style="-fx-background-radius: 10; -fx-background-color: #ED1A0D;" text="Purchase" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnRefresh" layoutX="122.0" layoutY="325.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="50.0" style="-fx-background-radius: 10; -fx-background-color: #D58917;">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Vector.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <AnchorPane layoutX="329.0" layoutY="261.0" prefHeight="271.0" prefWidth="402.0" style="-fx-background-color: #2A2A2A; -fx-background-radius: 22;">
+         <children>
+            <Label layoutX="29.0" layoutY="13.0" text="Generate Bill" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <TableView fx:id="tblBill" layoutX="29.0" layoutY="36.0" prefHeight="200.0" prefWidth="335.0">
+              <columns>
+                <TableColumn fx:id="clmBillProduct" prefWidth="161.59994506835938" text="Product" />
+                <TableColumn fx:id="clmBillQuantity" prefWidth="172.00006103515625" text="Quantity" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnSearchCustomer" layoutX="212.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleCustomerSearch" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/octicon_search-16.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnAddItem" layoutX="264.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleAddItem" style="-fx-background-color: #30B900;" styleClass="button2" stylesheets="@CSS/style.css">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/ph_plus-bold.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnSearchItem" layoutX="220.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleProductSearch" prefHeight="26.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/octicon_search-16.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lblTotal" layoutX="76.0" layoutY="294.0" text="0.00" textFill="WHITE" />
+   </children>
+</AnchorPane>

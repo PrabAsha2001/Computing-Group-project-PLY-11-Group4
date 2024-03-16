@@ -71,6 +71,23 @@
 }
 
 .button2{
-    -fx-pref-height: 47;
-    -fx-pref-height: 41;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 40px;
+    -fx-background-radius: 10px;
+}
+
+
+.tab-header-background {
+    -fx-background-color: #1B1B1B; /* Set the background color */
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color:#D9D9D9;
+    -fx-border-radius: 10px;
+}
+
+
+.tab {
+    -fx-background-color: #D9D9D9; /* Set the background color of the tabs */
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
 }

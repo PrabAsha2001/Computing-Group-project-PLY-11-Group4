@@ -36,8 +36,6 @@ public class UserController implements Initializable {
         });
 
     }
-    
-
 
 
     DatabaseConnection connectNow = new DatabaseConnection();
@@ -205,9 +203,6 @@ public class UserController implements Initializable {
 
             connectDB.close();
         }catch(Exception e){e.printStackTrace();};
-
-
-
 
     }
 
